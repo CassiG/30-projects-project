@@ -12,6 +12,10 @@
   <div class="col">
     <h2 class="title">1 - CSS - Button</h2>
 
+    <div class="project">
+      <a href="#" class="button">Click Me</a>
+    </div>
+    
     <ul class="bottom-nav">
       <li><a href="/">Home</a></li>
       <li><a href="/">Blog</a></li>
