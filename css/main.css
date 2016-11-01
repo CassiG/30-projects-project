@@ -13,11 +13,18 @@ body {
   flex-direction: column;
 }
 
+ul {
+  display: flex;
+  flex-direction: row;
+}
+
 .main-content {
   flex: 1;
   width: 80%;
   margin: 0 auto;
-  padding: 5em 0;
+  padding: 1.5em 0;
+  display: flex;
+  flex-direction: column;
 }
 
 header,
@@ -34,6 +41,11 @@ body {
   Header Styles
 ==================================== */
 
+header {
+  margin: .2em 0;
+  padding: 0 0 .5em;
+}
+
 header h1 span{
   font-family: 'Alice', serif;
   font-size: 1em;
@@ -42,6 +54,8 @@ header h1 span{
 header h1  {
   font-family: 'Sacramento', cursive;
   font-size: 4em;
+  margin: 0;
+  padding: 0 0 .5em;
 }
 
 /* =================================
@@ -54,7 +68,17 @@ ul {
 
 ul li{
   list-style: none;
+  background-color: #FF5B5B;
+  margin: 0 auto;
+  padding: .5em 1.5em;
 }
+
+ul li a {
+  color: #fff;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
 
 /* =================================
   Footer Styles
@@ -64,4 +88,29 @@ footer.main-footer {
   padding: 1em 0;
   background-color: #90D1C6;
   color: #fff;
+}
+
+/* =================================
+  Tablet Styles
+==================================== */
+
+@media (min-width: 769px) {
+  .main-content {
+    flex-direction: row;
+  }
+
+
+}
+
+/* =================================
+  Desktop Styles
+==================================== */
+
+@media (min-width: 1025px) {
+
+.col {
+  padding: 1em;
+  flex-wrap: wrap;
+}
+
 }
