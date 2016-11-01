@@ -10,11 +10,14 @@
   <div class="main-content">
 
     <div class="col first">
-      <p>Vexillologist pork belly typewriter la croix iPhone, thundercats photo booth schlitz gluten-free vinyl lumbersexual actually. Readymade tofu cray 3 wolf moon hella. Knausgaard DIY tbh, microdosing poutine street art venmo. Trust fund la croix distillery drinking vinegar hella. Church-key vinyl godard pour-over thundercats, williamsburg lumbersexual 90's squid hot chicken stumptown. Fixie marfa drinking vinegar VHS kitsch flannel sriracha. Poutine jean shorts hashtag flexitarian, twee chicharrones mixtape keytar man braid direct trade tofu umami lumbersexual green juice.</p>
+      <p>30 Projects Project is a side ... well, project, by me: <a href="http://www.cassigallagher.com">Cassi Gallagher</a>. As someone who has a passion for design, code, illustration, and far too much more (call it the multipotentialite in me), I've always found myself learning as much as a possibly can. However, I found this can be a dangerous trap. I found myself learning by reading blog posts, watching videos, but then not doing much else. I would never implement that learning. And that, friends, can get you into trouble. So I decided to implement. Turn what I learned into 30 projects released ever week. So sit back, check in, read my companion blog, and learn with me!</p>
     </div>
 
     <div class="col second">
-      <p>Activated charcoal occupy master cleanse succulents. Occupy listicle gluten-free tofu. Bicycle rights food truck kogi actually, tote bag offal kombucha shoreditch hashtag semiotics pug. Yuccie offal butcher keffiyeh health goth. Unicorn mumblecore copper mug deep v distillery hexagon tbh affogato, next level raw denim PBR&B crucifix. Dreamcatcher pok pok fam tousled, helvetica four dollar toast semiotics retro. Wayfarers raw denim viral microdosing williamsburg.</p>
+      <h3>Want More?</h3>
+      <p>If you're interested in reading more about each project make sure to check out the <a href="http://www.cassigallagher.com">companion blog.</a></p>
+
+      <p>If you want to chat about this project, send me ideas for the next 30 projects, talk to me about learning, code, design, (or anything really) - send me a message. I look forward to hearing from you!</p>
     </div>
 
   </div>

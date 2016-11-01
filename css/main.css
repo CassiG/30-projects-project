@@ -42,6 +42,10 @@ h2.title {
   text-align: center;
   margin: 0 auto;
 }
+
+p {
+  line-height: 1.5em;
+}
 /* =================================
   Header Styles
 ==================================== */
@@ -89,6 +93,18 @@ ul.bottom-nav {
     flex-direction: row;
     justify-content: center;
     margin-top: auto;
+}
+
+/* =================================
+  Content Styles
+==================================== */
+
+.first {
+  flex: 2;
+}
+
+.second {
+  flex: 1; 
 }
 
 /* =================================
