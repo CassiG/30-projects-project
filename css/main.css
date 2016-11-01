@@ -12,13 +12,14 @@ body {
   flex: 1;
 }
 
-/* =================================
-  Header Styles
-==================================== */
-
-header {
+header,
+footer {
  text-align: center;
 }
+
+/* =================================
+  Nav
+==================================== */
 
 ul {
   -webkit-padding-start:0em;
@@ -26,4 +27,14 @@ ul {
 
 ul li{
   list-style: none;
+}
+
+/* =================================
+  Footer Styles
+==================================== */
+
+footer.main-footer {
+  padding: 1em 0;
+  background-color: #90D1C6;
+  color: #fff;
 }
