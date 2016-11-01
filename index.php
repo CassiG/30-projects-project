@@ -2,6 +2,11 @@
     include("includes/header.html");
   ?>
 
+    <ul class="main-nav">
+      <li><a href="/css.php">Project 1: CSS</a></li>
+    </ul>
+  </header>
+
   <div class="main-content">
 
     <div class="col first">
