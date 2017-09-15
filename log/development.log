@@ -249,3 +249,89 @@ Processing by PostsController#index as HTML
 Completed 200 OK in 23ms (Views: 20.5ms)
 
 
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (2.0ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (2.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35mSQL (4.2ms)[0m  [1m[31mDELETE FROM "posts"[0m
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (1.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35mSQL (3.3ms)[0m  [1m[31mDELETE FROM "posts"[0m
+  [1m[35m (1.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (1.6ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  [1m[35m (2.2ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  [1m[35m (2.2ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreatePosts (20170915035026)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCREATE TABLE "posts" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar, "body" text, "summary" text, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20170915035026"]]
+  [1m[35m (2.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.8ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2017-09-15 16:28:05.149752"], ["updated_at", "2017-09-15 16:28:05.149752"]]
+  [1m[35m (3.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35mSQL (2.3ms)[0m  [1m[31mDELETE FROM "posts"[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "posts" ("title", "body", "summary", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "Harry Potter and the Chamber of Secrets"], ["body", "Chartreuse post-ironic distillery franzen kogi retro. Letterpress kickstarter 3 wolf moon ennui pour-over echo. Bespoke goth actually normcore beard."], ["summary", "Biodiesel farm-to-table vegan salvia. Single-origin coffee loko fingerstache brunch yr pabst. Austin blog cleanse thundercats butcher slow-carb."], ["created_at", "2017-09-15 16:28:14.436949"], ["updated_at", "2017-09-15 16:28:14.436949"]]
+  [1m[35m (1.8ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "posts" ("title", "body", "summary", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "Harry Potter and the Sorcerer's Stone"], ["body", "Chillwave tilde shabby chic synth sartorial readymade leggings ugh. Cronut seitan swag irony kitsch williamsburg try-hard. Synth hella authentic humblebrag. Dreamcatcher williamsburg blue bottle shabby chic."], ["summary", "Schlitz poutine plaid chambray leggings."], ["created_at", "2017-09-15 16:28:14.441705"], ["updated_at", "2017-09-15 16:28:14.441705"]]
+  [1m[35m (1.9ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "posts" ("title", "body", "summary", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "Harry Potter and the Prisoner of Azkaban"], ["body", "Fingerstache brunch typewriter green juice muggle magic cray. Squid williamsburg cray 8-bit tousled cold-pressed chicharrones."], ["summary", "Try-hard schlitz dreamcatcher banh mi yuccie photo booth vice."], ["created_at", "2017-09-15 16:28:14.445851"], ["updated_at", "2017-09-15 16:28:14.445851"]]
+  [1m[35m (1.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "posts" ("title", "body", "summary", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "Harry Potter and the Goblet of Fire"], ["body", "Cray goth chambray before they sold out hoodie etsy readymade diy. Waistcoat etsy master vegan fingerstache. Selfies disrupt migas kickstarter tofu wes anderson goth gastropub. Bespoke disrupt asymmetrical pbr&b post-ironic muggle magic trust fund."], ["summary", "Pug organic raw denim lo-fi bicycle rights selvage chia."], ["created_at", "2017-09-15 16:28:14.449825"], ["updated_at", "2017-09-15 16:28:14.449825"]]
+  [1m[35m (1.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "posts" ("title", "body", "summary", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "Harry Potter and the Deathly Hallows"], ["body", "Gluten-free echo direct trade you probably haven't heard of them neutra. Salvia messenger bag yr viral synth forage migas lumbersexual. Migas banh mi flannel. Church-key wolf chambray."], ["summary", "Echo mumblecore shabby chic photo booth +1. Loko everyday photo booth sriracha plaid small batch."], ["created_at", "2017-09-15 16:28:14.454101"], ["updated_at", "2017-09-15 16:28:14.454101"]]
+  [1m[35m (1.4ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "posts" ("title", "body", "summary", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "Harry Potter and the Deathly Hallows"], ["body", "Letterpress cleanse artisan whatever freegan raw denim. Try-hard art party seitan gastropub. Pop-up whatever drinking scenester. Cornhole cleanse direct trade disrupt plaid brooklyn etsy hella."], ["summary", "Banh mi occupy art party meh portland food truck tote bag tacos."], ["created_at", "2017-09-15 16:28:14.457671"], ["updated_at", "2017-09-15 16:28:14.457671"]]
+  [1m[35m (1.5ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "posts" ("title", "body", "summary", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "Harry Potter and the Order of the Phoenix"], ["body", "Venmo lo-fi street pour-over flexitarian. Direct trade lumbersexual pickled semiotics muggle magic offal. Shoreditch austin gastropub."], ["summary", "Vegan fanny pack venmo dreamcatcher raw denim celiac lumbersexual portland. Roof loko butcher slow-carb lomo lo-fi schlitz 8-bit. Whatever brooklyn pug knausgaard tote bag 90's."], ["created_at", "2017-09-15 16:28:14.461784"], ["updated_at", "2017-09-15 16:28:14.461784"]]
+  [1m[35m (1.7ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "posts" ("title", "body", "summary", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "Harry Potter and the Chamber of Secrets"], ["body", "Kickstarter wayfarers leggings. Iphone wes anderson freegan farm-to-table muggle magic butcher biodiesel xoxo. Bicycle rights food truck slow-carb."], ["summary", "Gastropub beard shoreditch. Tofu phlogiston meggings cornhole chia authentic green juice actually."], ["created_at", "2017-09-15 16:28:14.465904"], ["updated_at", "2017-09-15 16:28:14.465904"]]
+  [1m[35m (1.6ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.3ms)[0m  [1m[32mINSERT INTO "posts" ("title", "body", "summary", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "Harry Potter and the Sorcerer's Stone"], ["body", "Flexitarian post-ironic salvia cleanse polaroid messenger bag aesthetic. Knausgaard xoxo art party brunch cliche echo mlkshk austin."], ["summary", "Fixie fanny pack stumptown. Hammock loko jean shorts cronut cred."], ["created_at", "2017-09-15 16:28:14.469678"], ["updated_at", "2017-09-15 16:28:14.469678"]]
+  [1m[35m (2.0ms)[0m  [1m[36mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  [1m[35mSQL (0.4ms)[0m  [1m[32mINSERT INTO "posts" ("title", "body", "summary", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "Harry Potter and the Order of the Phoenix"], ["body", "Shoreditch skateboard slow-carb heirloom next level keffiyeh tilde. Williamsburg carry small batch 90's readymade forage."], ["summary", "Tumblr polaroid vinyl ugh."], ["created_at", "2017-09-15 16:28:14.473771"], ["updated_at", "2017-09-15 16:28:14.473771"]]
+  [1m[35m (1.8ms)[0m  [1m[36mcommit transaction[0m
+Started GET "/" for 127.0.0.1 at 2017-09-15 09:28:30 -0700
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  Rendered posts/index.html.erb within layouts/application (1.5ms)
+Completed 500 Internal Server Error in 15ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/Users/cassi/Documents/CodeProjects/PersonalProjects/30-projects-project/app/views/posts/index.html.erb:6: syntax error, unexpected keyword_ensure, expecting keyword_end
+/Users/cassi/Documents/CodeProjects/PersonalProjects/30-projects-project/app/views/posts/index.html.erb:8: syntax error, unexpected end-of-input, expecting keyword_end):
+  
+app/views/posts/index.html.erb:6: syntax error, unexpected keyword_ensure, expecting keyword_end
+app/views/posts/index.html.erb:8: syntax error, unexpected end-of-input, expecting keyword_end
+Started GET "/" for 127.0.0.1 at 2017-09-15 09:28:52 -0700
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.6ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  Rendered posts/index.html.erb within layouts/application (23.3ms)
+Completed 200 OK in 56ms (Views: 51.4ms | ActiveRecord: 1.2ms)
+
+
