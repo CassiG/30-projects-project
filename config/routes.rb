@@ -3,5 +3,9 @@ Rails.application.routes.draw do
   resources :posts
   resources :tags
   resources :users
+
+  get '/login', to: 'sessions#new'
+  post '/login', to: 'sessions#create'
+  delete '/logout', to: 'sessions#destroy'
   root "posts#index"
 end
