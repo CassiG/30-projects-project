@@ -1,6 +1,7 @@
 require 'bcrypt'
 class User < ApplicationRecord
   include BCrypt
+  has_secure_password
 
   def password
     @password ||= Password.new(password_hash)
@@ -10,4 +11,5 @@ class User < ApplicationRecord
     @password = Password.create(new_password)
     self.password_hash = @password
   end
+
 end
