@@ -1,2 +1,13 @@
-<%= @post.title %>
-<%= @post.body %>
+<%= link_to "Home", posts_path%>
+</div>
+<div class="clear"></div>
+
+<div class="mini-nav">
+  <%= link_to "Edit", edit_post_path(@post), class: "post-edit" %> /
+  <%= link_to "Delete", post_path(@post), method: :delete, data: {confirm: "Really delete the article?"}, class: "post-edit" %>
+</div>
+<h2> <%= @post.title %> </h2>
+<p> <%= @post.body %> </p>
+<p> <% @post.tags.each do |tag| %>
+    <%= link_to tag.name, tag_path(tag), class: 'tag' %>
+  <% end %></p>

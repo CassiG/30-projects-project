@@ -1,5 +1,19 @@
+<%= link_to "Sign Up", new_user_path %>
+</div>
+
+<div class="mini-nav">
+  <h3>All Posts</h3> /
+  <%= link_to "New Post", new_post_path%>
+</div>
+
+
 <% @posts.each do |post| %>
-<h2><%= post.title %></h2>
-<p> <%= post.summary %> </p>
-<%= link_to 'Read More', post_path(post) %>
+  <h2> <%= link_to post.title, post_path(post), class: 'post_title'%> </h2>
+  <p class='tagline'> Posted: <%= post.created_at.strftime("%m/%d/%Y | %I:%M%p") %> </p>
+  <p> <%= post.body %> </p>
+
+  <% post.tags.each do |tag| %>
+    <%= link_to tag.name, tag_path(tag), class: 'tag' %>
+  <% end %>
+  <hr>
 <% end %>

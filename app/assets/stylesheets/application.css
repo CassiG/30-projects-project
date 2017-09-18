@@ -13,3 +13,116 @@
  *= require_tree .
  *= require_self
  */
+
+ .container {
+   margin: 0 auto;
+   width: 60%;
+ }
+
+ .header a {
+   text-transform: uppercase;
+   float: right;
+   margin: 10px 0px 0px 0px;
+ }
+
+ body {
+   font-family: 'Montserrat', sans-serif;
+ }
+
+h1 {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 900;
+  /* letter-spacing: 2px; */
+  font-size: 3.5em;
+  margin: 40px 0px 0px 0px;
+}
+
+h2 {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-weight: 900;
+  /* letter-spacing: 2px; */
+  font-size: 2em;
+  margin: 10px 0px -10px 0px;
+}
+
+h3 {
+  text-transform: uppercase;
+  clear: both;
+}
+
+hr {
+  border: 1px solid #DADADA;
+}
+
+a {
+  text-decoration: none;
+  color: #FF5C5C;
+}
+
+p {
+  font-weight: 300;
+  font-size: .9em;
+}
+
+.head-hr {
+    width: 80%;
+    float: left;
+    border: 10px solid #A8A8A8;
+}
+
+.tagline {
+  text-transform: uppercase;
+  color: #A8A8A8;
+  font-size: .8em;
+}
+
+.clear {
+  clear: both;
+}
+
+input#post_title,
+textarea#post_body,
+input#post_tag_list,
+input#user_username,
+input#user_email,
+input#user_password {
+  padding: 10px 0px 10px 5px;
+  border: 1px solid #A8A8A8;
+  margin: 5px 0;
+}
+
+input#post_title,
+input#user_username,
+input#user_email,
+input#user_password {
+  width: 80%;
+  height: 20px;
+}
+textarea#post_body {
+  width: 80%;
+  height: 100px;
+}
+
+input#post_tag_list {
+  width: 40%;
+  height: 20px;
+}
+
+input[type="submit"] {
+    display: block;
+    margin: 20px 0;
+    border: none;
+    padding: 10px;
+    color: #fff;
+    text-transform: uppercase;
+    background-color: #FF5C5C;
+}
+
+label {
+    text-transform: uppercase;
+    font-weight: 300;
+}
+
+form {
+    margin: 20px 0;
+}

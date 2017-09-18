@@ -1,31 +1,22 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>30 Projects Project</title>
+    <title>Awesome Blog</title>
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,900" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400" rel="stylesheet">
     <%= csrf_meta_tags %>
 
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= stylesheet_link_tag    'application', media: 'all' %>
+    <%= javascript_include_tag 'application' %>
   </head>
 
   <body>
-    <div class="header">
-      <h1 class="logo">30 Projects Project</h1>
-      <nav></nav>
-    </div>
-    <div class="posts">
-      <%= yield %>
-    </div>
-
-    <div class="sidebar">
-      <div class='current-project'>
-        <h3>Current Project</h3>
-        <p>CSS Animations</p>
+    <div class="container">
+      <div class="header">
+        <h1>Awesome Blog</h1>
+        <hr class="head-hr">
+        <%= yield %>
       </div>
-    </div>
-
-    <div class="footer">
-      Cassi Gallagher-Shearer Development
     </div>
   </body>
 </html>

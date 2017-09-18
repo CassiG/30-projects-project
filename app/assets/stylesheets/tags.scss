@@ -1,0 +1,19 @@
+// Place all the styles related to the tags controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.tag {
+    display: inline-block;
+    background-color: #FF5C5C;
+    color: #fff;
+    padding: 7px;
+    margin: 0px 0 10px;
+    width: 7%;
+    text-align: center;
+    font-size: 0.8em;
+    font-weight: 300;
+}
+
+.articles {
+  list-style: none;
+}

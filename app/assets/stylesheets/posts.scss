@@ -1,0 +1,22 @@
+// Place all the styles related to the posts controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+.post-edit {
+  text-transform: uppercase;
+  margin: 10px 0px 0px 0px;
+}
+
+.mini-nav {
+    display: inline-block;
+    margin: 20px 0px -10px 0px;
+}
+
+.mini-nav h3 {
+  display: inline;
+}
+
+.mini-nav a {
+  text-transform: uppercase;
+  font-size: 1.17em;
+}

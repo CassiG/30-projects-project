@@ -1,0 +1,11 @@
+<%= link_to "Home", posts_path%>
+</div>
+<div class="clear"></div>
+<h2> Articles Under: <%= @tag.name %> </h2>
+<p>
+  <% @tag.posts.each do |post| %>
+  <ul class = "articles">
+    <li><%= link_to post.title, post_path(post) %></li>
+  </ul>
+  <% end %>
+</p>
