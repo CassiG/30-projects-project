@@ -1,7 +1,7 @@
 class Post < ApplicationRecord
   validates :title, :body, { presence: true }
 
-  has_many :taggings
+  has_many :taggings, dependent: :nullify
   has_many :tags, through: :taggings
 
   def tag_list
