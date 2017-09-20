@@ -3,7 +3,9 @@
 
 <div class="mini-nav">
   <h3>All Posts</h3> /
-  <%= link_to "New Post", new_post_path%>
+  <% if session[:user_id] %>
+    <%= link_to "New Post", new_post_path%>
+  <% end %>
 </div>
 
 

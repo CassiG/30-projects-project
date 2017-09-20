@@ -3,8 +3,10 @@
 <div class="clear"></div>
 
 <div class="mini-nav">
-  <%= link_to "Edit", edit_post_path(@post), class: "post-edit" %> /
-  <%= link_to "Delete", post_path(@post), method: :delete, data: {confirm: "Really delete the article?"}, class: "post-edit" %>
+  <% if session[:user_id] %>
+    <%= link_to "Edit", edit_post_path(@post), class: "post-edit" %> /
+    <%= link_to "Delete", post_path(@post), method: :delete, data: {confirm: "Really delete the article?"}, class: "post-edit" %>
+  <% end %>
 </div>
 <h2> <%= @post.title %> </h2>
 <p> <%= @post.body %> </p>

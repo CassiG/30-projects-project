@@ -3056,3 +3056,194 @@ Processing by PostsController#index as HTML
 Completed 200 OK in 17ms (Views: 15.6ms | ActiveRecord: 0.2ms)
 
 
+Started GET "/posts/new" for 127.0.0.1 at 2017-09-20 14:24:18 -0700
+Processing by PostsController#new as HTML
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/_form.html.erb (2.1ms)
+  Rendered posts/new.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 20ms (Views: 18.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/posts" for 127.0.0.1 at 2017-09-20 14:24:23 -0700
+Processing by PostsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"jF+jv/ZqrWjBXtqnInJsxeUjzW5cRGxTy3MEqe4DcieGeufEpQVIEpwoe7zGczYofAHoTkN1rag+BXIRBTb/Jw==", "post"=>{"title"=>"Test", "body"=>"Test test", "tag_list"=>"test"}, "commit"=>"Create Post"}
+  [1m[36mTag Load (8.8ms)[0m  [1m[34mSELECT  "tags".* FROM "tags" WHERE "tags"."name" = $1 LIMIT $2[0m  [["name", "test"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "tags" ("name", "created_at", "updated_at") VALUES ($1, $2, $3) RETURNING "id"[0m  [["name", "test"], ["created_at", "2017-09-20 21:24:23.717825"], ["updated_at", "2017-09-20 21:24:23.717825"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  [1m[32mINSERT INTO "posts" ("title", "body", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["title", "Test"], ["body", "Test test"], ["created_at", "2017-09-20 21:24:23.756767"], ["updated_at", "2017-09-20 21:24:23.756767"]]
+  [1m[35mSQL (33.9ms)[0m  [1m[32mINSERT INTO "taggings" ("tag_id", "post_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["tag_id", 1], ["post_id", 1], ["created_at", "2017-09-20 21:24:23.758468"], ["updated_at", "2017-09-20 21:24:23.758468"]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/posts/1
+Completed 302 Found in 96ms (ActiveRecord: 51.8ms)
+
+
+Started GET "/posts/1" for 127.0.0.1 at 2017-09-20 14:24:23 -0700
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/application
+  [1m[36mTag Load (0.5ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."post_id" = $1[0m  [["post_id", 1]]
+  Rendered posts/show.html.erb within layouts/application (8.7ms)
+Completed 200 OK in 41ms (Views: 19.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-09-20 14:24:40 -0700
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  [1m[36mTag Load (0.9ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."post_id" = $1[0m  [["post_id", 1]]
+  Rendered posts/index.html.erb within layouts/application (7.7ms)
+Completed 200 OK in 20ms (Views: 18.1ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/posts/1" for 127.0.0.1 at 2017-09-20 14:24:42 -0700
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/application
+  [1m[36mTag Load (0.4ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."post_id" = $1[0m  [["post_id", 1]]
+  Rendered posts/show.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 17ms (Views: 14.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-09-20 14:24:48 -0700
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  [1m[36mTag Load (0.4ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."post_id" = $1[0m  [["post_id", 1]]
+  Rendered posts/index.html.erb within layouts/application (4.3ms)
+Completed 200 OK in 17ms (Views: 15.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-09-20 14:25:27 -0700
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  [1m[36mTag Load (0.6ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."post_id" = $1[0m  [["post_id", 1]]
+  Rendered posts/index.html.erb within layouts/application (5.5ms)
+Completed 200 OK in 37ms (Views: 34.6ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/posts/1" for 127.0.0.1 at 2017-09-20 14:25:33 -0700
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/application
+  [1m[36mTag Load (0.4ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."post_id" = $1[0m  [["post_id", 1]]
+  Rendered posts/show.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 24ms (Views: 21.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/posts/1" for 127.0.0.1 at 2017-09-20 14:26:07 -0700
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/application
+  [1m[36mTag Load (0.2ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."post_id" = $1[0m  [["post_id", 1]]
+  Rendered posts/show.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 39ms (Views: 36.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/admin-login" for 127.0.0.1 at 2017-09-20 14:26:14 -0700
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.erb within layouts/application
+  Rendered sessions/_login.erb (1.4ms)
+  Rendered sessions/new.erb within layouts/application (3.6ms)
+Completed 200 OK in 32ms (Views: 18.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/admin-login" for 127.0.0.1 at 2017-09-20 14:26:20 -0700
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"G8lCHBRej1XrHANo9to169NK6rDtbWL+ptoP+9Na3+cR7AZnRzFqL7ZqonMS228GSmjPkPJcowVTrHlDOG9S5w==", "session"=>{"email"=>"ccgall@gmail.com", "password"=>"[FILTERED]"}, "commit"=>"Save Session"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "ccgall@gmail.com"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Completed 302 Found in 123ms (ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-09-20 14:26:20 -0700
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  [1m[36mTag Load (0.2ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."post_id" = $1[0m  [["post_id", 1]]
+  Rendered posts/index.html.erb within layouts/application (3.9ms)
+Completed 200 OK in 17ms (Views: 15.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/posts/new" for 127.0.0.1 at 2017-09-20 14:26:24 -0700
+Processing by PostsController#new as HTML
+  Rendering posts/new.html.erb within layouts/application
+  Rendered posts/_form.html.erb (2.5ms)
+  Rendered posts/new.html.erb within layouts/application (18.9ms)
+Completed 200 OK in 48ms (Views: 30.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/posts" for 127.0.0.1 at 2017-09-20 14:26:26 -0700
+Processing by PostsController#index as HTML
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts"[0m
+  [1m[36mTag Load (0.2ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."post_id" = $1[0m  [["post_id", 1]]
+  Rendered posts/index.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 20ms (Views: 18.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/posts/1" for 127.0.0.1 at 2017-09-20 14:26:27 -0700
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPost Load (0.3ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/application
+  [1m[36mTag Load (0.3ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."post_id" = $1[0m  [["post_id", 1]]
+  Rendered posts/show.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 20ms (Views: 16.9ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/posts/1/edit" for 127.0.0.1 at 2017-09-20 14:26:28 -0700
+Processing by PostsController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPost Load (0.2ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering posts/edit.html.erb within layouts/application
+  [1m[36mTag Load (0.2ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."post_id" = $1[0m  [["post_id", 1]]
+  Rendered posts/_form.html.erb (3.6ms)
+  Rendered posts/edit.html.erb within layouts/application (5.1ms)
+Completed 200 OK in 35ms (Views: 18.3ms | ActiveRecord: 0.4ms)
+
+
+Started PATCH "/posts/1" for 127.0.0.1 at 2017-09-20 14:26:30 -0700
+Processing by PostsController#update as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ErAZFBiczg3AUJ8cyvpCPP9+Lxl2hcR0DPhDy/IoeWUYlV1vS/Mrd50mPgcu+xjRZlwKOWm0BY/5jjVzGR30ZQ==", "post"=>{"title"=>"Test", "body"=>"Test test", "tag_list"=>"test"}, "commit"=>"Update Post", "id"=>"1"}
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTag Load (0.2ms)[0m  [1m[34mSELECT  "tags".* FROM "tags" WHERE "tags"."name" = $1 LIMIT $2[0m  [["name", "test"], ["LIMIT", 1]]
+  [1m[36mTag Load (0.2ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."post_id" = $1[0m  [["post_id", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/posts/1
+Completed 302 Found in 6ms (ActiveRecord: 0.9ms)
+
+
+Started GET "/posts/1" for 127.0.0.1 at 2017-09-20 14:26:30 -0700
+Processing by PostsController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering posts/show.html.erb within layouts/application
+  [1m[36mTag Load (0.3ms)[0m  [1m[34mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."post_id" = $1[0m  [["post_id", 1]]
+  Rendered posts/show.html.erb within layouts/application (2.7ms)
+Completed 200 OK in 20ms (Views: 17.6ms | ActiveRecord: 0.4ms)
+
+
+Started DELETE "/posts/1" for 127.0.0.1 at 2017-09-20 14:26:33 -0700
+Processing by PostsController#destroy as HTML
+  Parameters: {"authenticity_token"=>"oKyxdPw8x32UEQ8sZXrDZ7PCpXTavDHf22MjnGG7vtOqifUPr1MiB8lnrjeBe5mKKuCAVMWN8CQuFVUkio4z0w==", "id"=>"1"}
+  [1m[36mPost Load (0.1ms)[0m  [1m[34mSELECT  "posts".* FROM "posts" WHERE "posts"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35mSQL (9.2ms)[0m  [1m[31mDELETE FROM "posts" WHERE "posts"."id" = $1[0m  [["id", 1]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+Completed 500 Internal Server Error in 12ms (ActiveRecord: 9.6ms)
+
+
+  
+ActiveRecord::InvalidForeignKey (PG::ForeignKeyViolation: ERROR:  update or delete on table "posts" violates foreign key constraint "fk_rails_2c662e858e" on table "taggings"
+DETAIL:  Key (id)=(1) is still referenced from table "taggings".
+: DELETE FROM "posts" WHERE "posts"."id" = $1):
+  
+app/controllers/posts_controller.rb:23:in `destroy'
