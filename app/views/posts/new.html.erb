@@ -4,4 +4,9 @@
 <div class="mini-nav">
   <h3>Create a New Post</h3>
 </div>
-<%= render partial: 'form' %>
+
+<% if session[:user_id] %>
+  <%= render partial: 'form' %>
+<% else %>
+  <p>Please Login First</p>
+<% end %>
