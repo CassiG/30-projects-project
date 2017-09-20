@@ -6,7 +6,7 @@ Rails.application.routes.draw do
 
   get '/admin-login', to: 'sessions#new'
   post '/admin-login', to: 'sessions#create'
-  delete '/logout', to: 'sessions#destroy'
+  get '/logout', to: 'sessions#destroy'
 
   get '/about', to: 'pages#show'
   root "posts#index"

@@ -15,6 +15,9 @@
       <div class="header">
         <h1>30 Projects Project</h1>
         <hr class="head-hr">
+        <% if session[:user_id] %>
+        <%= link_to "logout", logout_path%>
+        <% end %>
         <%= yield %>
       </div>
     </div>
