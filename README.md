@@ -4,4 +4,4 @@ A simple CMS built on Ruby on Rails - built as part of the curriculum for (DevBo
 
 ## Built with
 
-* (Ruby on Rails v2.3)[http://rubyonrails.org/]
+* (Ruby on Rails v2.3)[http://rubyonrails.org/] 
