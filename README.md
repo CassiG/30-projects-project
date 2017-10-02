@@ -1,24 +1,7 @@
-# README
+# Ruby on Rails Blog
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+A simple CMS built on Ruby on Rails - built as part of the curriculum for (DevBootcamp)[https://devbootcamp.com/]
 
-Things you may want to cover:
+## Built with
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+* (Ruby on Rails v2.3)[http://rubyonrails.org/]
